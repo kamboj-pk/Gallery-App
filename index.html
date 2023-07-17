@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery Images</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid p-0 m-0">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light shadow" id="nav">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" id="brand">Gallery App</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <select class="form-select border-0" id="orderby" onchange="orderBy(this)">
+                        <option selected value="latest">Latest</option>
+                        <option value="oldest">oldest</option>
+                        <option value="popular">popular</option>
+                      </select> -->
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="text" placeholder="Search image" id="searchKey">
+                  <button class="btn btn-outline-dark" type="button" id="searchBtn">Search</button>
+                </form>
+
+              </div>
+            </div>
+          </nav>
+
+          <!-- search text -->
+          <div class="text-dark m-3 text-muted"></div>
+          <h3 id="searchQuery"></h3>
+
+          <!-- images -->
+          <div class="row ps-3 pe-3">
+            <div class="col-md-4" id="col-1"></div>
+            <div class="col-md-4" id="col-2"></div>
+            <div class="col-md-4" id="col-3"></div>
+
+            <!-- error div -->
+            <div class="m-5 text-center" id="errorGrid"></div>
+
+          </div>
+  
+            <!-- Modal -->
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Image</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center" id="modalBody">
+                    </div>
+                    <div class="modal-footer">
+                    <a type="button" href="" target="_blank" class="btn btn-success" id="imageViewLink">View</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
